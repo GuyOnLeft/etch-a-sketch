@@ -8,11 +8,33 @@ header  {
     padding-top: 10%;
 }
 
+.container-holder   {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
 .container  {
-    
-    height: 400px;
-    width: 400px;
+    box-shadow: 11px 10px 5px 0px rgba(151,139,139,0.75);
+    -webkit-box-shadow: 11px 10px 5px 0px rgba(151,139,139,0.75);
+    -moz-box-shadow: 11px 10px 5px 0px rgba(151,139,139,0.75);
+    height: 350px;
+    width: 350px;
     background-color: #F5F5F5;
     display: grid;
-    align-content: c;
+    grid-gap: 1em;
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    
 }
+.grid-item {
+    padding: 1em;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+
+:root {
+    --grid-cols: 1;
+    --grid-rows: 1;
+  }
